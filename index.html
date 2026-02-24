@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitation Feedback Form – Lifegate People's Assembly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <!-- SVG logo placeholder representing TBI branding -->
+        <div class="logo-emblem">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Templebreed International Logo">
+            <circle cx="40" cy="40" r="38" stroke="#5FA4A9" stroke-width="2.5"/>
+            <circle cx="40" cy="40" r="28" stroke="#2F6F73" stroke-width="1.5"/>
+            <path d="M40 14 L46 28 L62 28 L50 37 L54 52 L40 43 L26 52 L30 37 L18 28 L34 28 Z" fill="#5FA4A9" opacity="0.85"/>
+            <circle cx="40" cy="40" r="6" fill="#2F6F73"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="org-abbr">TBI</span>
+          <span class="org-full">Templebreed Int'l FTYI</span>
+        </div>
+      </div>
+      <div class="header-center">
+        <h1 class="org-name">Lifegate People's Assembly Inc.</h1>
+        <p class="org-address">Opp. 27A Gwari Avenue Barnawa, GRA Kaduna South</p>
+        <p class="org-contact">
+          <a href="mailto:templebreedinternational@gmail.com">templebreedinternational@gmail.com</a>
+          &nbsp;·&nbsp; +234 802 828 2715 &nbsp;·&nbsp; +234 916 192 2979
+        </p>
+      </div>
+      <div class="header-seal">
+        <div class="seal-ring">
+          <span>FTYI</span>
+        </div>
+      </div>
+    </div>
+    <div class="header-banner">
+      <h2 class="form-title">Invitation Feedback Form</h2>
+      <p class="form-subtitle">Calvary greetings. Thank you for inviting <em>Apostle Jacob Denham</em>. Kindly complete this form to ensure proper preparation and alignment with your expectations.</p>
+    </div>
+    <div class="header-divider"></div>
+  </header>
+
+  <!-- ===== MAIN FORM ===== -->
+  <main class="form-wrapper">
+    <form id="feedbackForm" novalidate>
+
+      <!-- SECTION 1: Meeting Information -->
+      <section class="form-section" data-section="1">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Meeting Information</h3>
+            <p class="section-desc">Provide core details about the upcoming meeting.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group">
+            <label for="meetingDate">Meeting Date <span class="req">*</span></label>
+            <input type="date" id="meetingDate" name="meetingDate" required aria-required="true" />
+            <span class="field-error" id="err-meetingDate"></span>
+          </div>
+          <div class="field-group">
+            <label for="meetingTheme">Meeting Theme <span class="req">*</span></label>
+            <input type="text" id="meetingTheme" name="meetingTheme" placeholder="e.g. Advancing the Kingdom" required aria-required="true" />
+            <span class="field-error" id="err-meetingTheme"></span>
+          </div>
+          <div class="field-group full">
+            <label for="location">Location (State / Area) <span class="req">*</span></label>
+            <input type="text" id="location" name="location" placeholder="City, State" required aria-required="true" />
+            <span class="field-error" id="err-location"></span>
+          </div>
+          <div class="field-group full">
+            <label for="directions">Detailed Directions to Venue <span class="req">*</span></label>
+            <textarea id="directions" name="directions" rows="4" placeholder="Include landmarks, road names, turning points…" required aria-required="true"></textarea>
+            <span class="field-error" id="err-directions"></span>
+          </div>
+          <div class="field-group full">
+            <label for="mapUpload" class="file-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Attach Directions Map <span class="optional">(optional)</span>
+            </label>
+            <input type="file" id="mapUpload" name="mapUpload" accept="image/*,.pdf" class="file-input" />
+            <div class="file-display" id="fileDisplay">No file selected</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Schedule Details -->
+      <section class="form-section" data-section="2">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Schedule Details</h3>
+            <p class="section-desc">General timing of the full meeting programme.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group">
+            <label for="startTime">Meeting Start Time <span class="req">*</span></label>
+            <input type="time" id="startTime" name="startTime" required aria-required="true" />
+            <span class="field-error" id="err-startTime"></span>
+          </div>
+          <div class="field-group">
+            <label for="duration">Meeting Duration <span class="req">*</span></label>
+            <input type="text" id="duration" name="duration" placeholder="e.g. 3 hours" required aria-required="true" />
+            <span class="field-error" id="err-duration"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Apostle's Session -->
+      <section class="form-section" data-section="3">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Apostle Jacob Denham's Session</h3>
+            <p class="section-desc">Specific timing allocated for Apostle Jacob Denham.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group">
+            <label for="sessionStart">Session Start Time <span class="req">*</span></label>
+            <input type="time" id="sessionStart" name="sessionStart" required aria-required="true" />
+            <span class="field-error" id="err-sessionStart"></span>
+          </div>
+          <div class="field-group">
+            <label for="sessionDuration">Session Duration <span class="req">*</span></label>
+            <input type="text" id="sessionDuration" name="sessionDuration" placeholder="e.g. 1 hour 30 minutes" required aria-required="true" />
+            <span class="field-error" id="err-sessionDuration"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: Speaker's Information -->
+      <section class="form-section" data-section="4">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Expected / Invited Speakers</h3>
+            <p class="section-desc">List all pastors and speakers expected at the meeting.</p>
+          </div>
+        </div>
+        <div id="speakersContainer">
+          <!-- Speaker rows injected by JS -->
+        </div>
+        <button type="button" class="btn-add-speaker" id="addSpeakerBtn" aria-label="Add another speaker">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Add Speaker
+        </button>
+      </section>
+
+      <!-- SECTION 5: Session Expectations -->
+      <section class="form-section" data-section="5">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Session Expectations</h3>
+            <p class="section-desc">Given that Apostle Jacob Denham's teachings emphasize Christ and His teachings and other apostolic duties within the body of Christ, provide as much detail as possible.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group full">
+            <label for="expectations">Session Expectations <span class="req">*</span></label>
+            <textarea id="expectations" name="expectations" rows="6" placeholder="Describe the expected themes, outcomes, or specific focus areas for Apostle Jacob Denham's session…" required aria-required="true"></textarea>
+            <span class="field-error" id="err-expectations"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: Logistics Information -->
+      <section class="form-section" data-section="6">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Logistics Information</h3>
+            <p class="section-desc">Detail provisions available: accommodation, transportation, AV equipment, honorarium, etc.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group full">
+            <label for="logistics">Logistics Details <span class="req">*</span></label>
+            <textarea id="logistics" name="logistics" rows="5" placeholder="e.g. Accommodation: Provided at Victory Guest House. Transport: Pick-up from airport available. AV: Full PA system on-site. Honorarium: To be discussed…" required aria-required="true"></textarea>
+            <span class="field-error" id="err-logistics"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: Additional Information -->
+      <section class="form-section" data-section="7">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Additional Information & Contact</h3>
+            <p class="section-desc">Any other relevant notes plus your team's contact details.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group full">
+            <label for="additionalNotes">Additional Notes / Requests</label>
+            <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any other information that would help in planning Apostle Jacob Denham's session…"></textarea>
+          </div>
+          <div class="field-group">
+            <label for="phone1">Phone Number 1 <span class="req">*</span></label>
+            <input type="tel" id="phone1" name="phone1" placeholder="+234 800 000 0000" required aria-required="true" />
+            <span class="field-error" id="err-phone1"></span>
+          </div>
+          <div class="field-group">
+            <label for="phone2">Phone Number 2</label>
+            <input type="tel" id="phone2" name="phone2" placeholder="+234 800 000 0000" />
+          </div>
+          <div class="field-group full">
+            <label for="emailContact">Email Address <span class="req">*</span></label>
+            <input type="email" id="emailContact" name="emailContact" placeholder="contact@yourchurch.org" required aria-required="true" />
+            <span class="field-error" id="err-emailContact"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: Confirmation -->
+      <section class="form-section confirmation-section" data-section="8">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <h3 class="section-title">Confirmation</h3>
+            <p class="section-desc">Please confirm your understanding that this information will be used to ensure Apostle Jacob Denham's participation is seamless and impactful.</p>
+          </div>
+        </div>
+        <div class="fields-grid">
+          <div class="field-group full">
+            <label class="checkbox-label" for="confirmAccuracy">
+              <input type="checkbox" id="confirmAccuracy" name="confirmAccuracy" required aria-required="true" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-text">I confirm that the information provided is accurate and complete to the best of my knowledge. <span class="req">*</span></span>
+            </label>
+            <span class="field-error" id="err-confirmAccuracy"></span>
+          </div>
+          <div class="field-group">
+            <label for="signature">Signature (Host Name) <span class="req">*</span></label>
+            <input type="text" id="signature" name="signature" placeholder="Type your full name as signature" required aria-required="true" />
+            <span class="field-error" id="err-signature"></span>
+          </div>
+          <div class="field-group">
+            <label for="signDate">Date <span class="req">*</span></label>
+            <input type="date" id="signDate" name="signDate" required aria-required="true" />
+            <span class="field-error" id="err-signDate"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBMIT BUTTON -->
+      <div class="submit-area">
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span class="btn-text">Submit Feedback Form</span>
+          <span class="btn-spinner" id="btnSpinner" aria-hidden="true"></span>
+        </button>
+      </div>
+
+    </form>
+
+    <!-- SUCCESS MESSAGE -->
+    <div class="success-message" id="successMessage" role="alert" aria-live="polite">
+      <div class="success-inner">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>Form Submitted Successfully!</h3>
+        <p>Thank you. Your invitation feedback has been received. The TBI Protocol Team will be in touch shortly.</p>
+        <p class="success-contact">Questions? Contact <strong>Sis. Dorcas Ahiaba</strong> at <a href="tel:08023909822">08023909822</a> or <a href="mailto:Tbiprotocol@gmail.com">Tbiprotocol@gmail.com</a></p>
+        <button class="btn-reset" id="resetBtn">Submit Another Response</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-contact">
+        <strong>Protocol Contact:</strong> Sis. Dorcas Ahiaba &nbsp;|&nbsp;
+        <a href="tel:08023909822">08023909822</a> &nbsp;|&nbsp;
+        <a href="mailto:Tbiprotocol@gmail.com">Tbiprotocol@gmail.com</a>
+      </div>
+      <div class="footer-note">
+        Please return this form promptly. Thank you and God bless.
+      </div>
+      <div class="footer-brand">
+        © Lifegate People's Assembly Inc. · Templebreed Int'l FTYI
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
