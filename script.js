@@ -5,7 +5,7 @@
 
 // ===== CONFIGURATION =====
 // After deploying your Google Apps Script, paste the Web App URL here:
-const SCRIPT_URL = "PASTE_WEB_APP_URL_HERE";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzVcauglGDSnEowvOGk-2oqGITijG0EV8aVj3BwAaJjtWXTO4QvAEePMO0YD1OgyHM/exec";
 
 // ===== STATE =====
 let speakerCount = 0;
